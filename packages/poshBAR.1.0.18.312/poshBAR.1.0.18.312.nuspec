@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>poshBAR</id>
+    <version>1.0.18.312</version>
+    <title>Powershell Build &amp; Release</title>
+    <authors>Keith Larsen,  Chase Florell</authors>
+    <owners>Keith Larsen,  Chase Florell</owners>
+    <projectUrl>https://github.com/FutureStateMobile/poshBAR</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Reusables modules used in the aid of a .NET build and release cycle</description>
+    <summary>Powershell Build $amp; Release v-1.0.18</summary>
+    <copyright>Copyright 2014 FutureState Mobile Inc.</copyright>
+    <tags>devops build-release ci continuous integration</tags>
+    <dependencies>
+      <dependency id="psake" version="4.4.1" />
+      <dependency id="NuGet.CommandLine" version="2.8.3" />
+      <dependency id="XmlTransform" />
+    </dependencies>
+  </metadata>
+</package>

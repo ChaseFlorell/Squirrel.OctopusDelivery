@@ -1,0 +1,53 @@
+<environmentSettings>
+    <debug>true</debug>
+    <environment>local</environment>
+    <webSites>
+        <Squirrel.OctopusDelivery>
+            <physicalPathRoot>c:\inetpub</physicalPathRoot>
+            <physicalFolderPrefix>Squirrel.OctopusDelivery</physicalFolderPrefix>
+            <bindings>
+                <protocol>http</protocol>
+                <port>80</port>
+                <hostName>local.Squirrel.OctopusDelivery.com</hostName>
+            </bindings>
+            <bindings>
+                <protocol>https</protocol>
+                <port>443</port>
+                <hostName>local.Squirrel.OctopusDelivery.com</hostName>
+            </bindings>
+            <siteName>local.Squirrel.OctopusDelivery.com</siteName>
+            <appPath>/</appPath>
+            <!-- valid IIS Security Authentication types are: [anonymousAuthentication, basicAuthentication, clientCertificateMappingAuthentication, 
+                                                               digestAuthentication, iisClientCertificateMappingAuthentication, windowsAuthentication]-->
+            <iisAuthenticationTypes>anonymousAuthentication</iisAuthenticationTypes>
+            <systemWeb>
+                <authentication>
+                    <!-- valid asp.net Authentication modes are: [Windows, Forms, Passport, None]-->
+                    <mode>Windows</mode>
+                    <timeout>10</timeout>
+                </authentication>
+                <authorization>
+                    <!-- valid web.Config elements: [allowedUsers, allowedRoles, allowedVerbs] -->
+                    <allowedUsers>*</allowedUsers>
+                </authorization>
+            </systemWeb>
+            <appPool>
+                <name>Squirrel.OctopusDelivery</name>
+                <!-- valid identityTypes are: [LocalSystem, LocalService, NetworkService, SpecificUser, ApplicationPoolIdentity] -->
+                <identityType>NetworkService</identityType>
+                <!-- Set this value to the User the Service will run under in the format DOMAIN\username -->
+                <!-- If Running as 'NetworkService' then 'NT AUTHORITY\Network Service' is used -->
+                <userName>NT AUTHORITY\Network Service</userName>
+                <!-- Leave blank unless using SpecificUser -->
+                <password></password>
+                <maxWorkerProcesses>1</maxWorkerProcesses>
+            </appPool>
+        </Squirrel.OctopusDelivery>
+    </webSites>
+
+    <databases>
+        <Squirrel.OctopusDelivery>
+            <connectionString>Server=myServerAddress;Database=Squirrel.OctopusDelivery;Trusted_Connection=True;</connectionString>
+        </Squirrel.OctopusDelivery>
+    </databases>
+</environmentSettings>
