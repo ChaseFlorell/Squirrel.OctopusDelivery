@@ -89,6 +89,9 @@ _TeamCity*
 _dotCover.*
 *.dotCover
 
+# nuget directory
+.nuget/
+
 # NCrunch
 *.ncrunch*
 .*crunch*.local.xml
